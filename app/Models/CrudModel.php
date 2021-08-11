@@ -10,7 +10,12 @@ class CrudModel extends Model
     // Ya se define con anterioridad la tabla y llave primaria
     protected $table = 'persons';
     protected $primaryKey = 'id_person';
-    protected $allowedFields = ['name', 'lastname', 'age'];
+    protected $allowedFields = ['name', 'lastname', 'age', 'photo'];
+
+    protected $useTimestamps = true;
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
 
     public function allPersons()
     {
@@ -30,10 +35,14 @@ class CrudModel extends Model
 
     public function insertPerson($data)
     {
+        // 1. Inserta los datos en una tabla específica
         // Inserta los datos (nuevo registro) a la tabla Personas
-        $this->db->table('persons')->insert($data);
+        // $this->db->table('persons')->insert($data);
         // Retorna el último ID de la tabla
-        return $this->db->insertID();
+        // return $this->db->insertID();
+
+        // 2. Inserta datos en la tabla definida
+        return $this->insert($data);
     }
 
     public function editPerson($id_person)
@@ -52,12 +61,12 @@ class CrudModel extends Model
     public function updatePerson($data)
     {
         // 1. Actualizar una tabla específica
-        $Persons = $this->db->table('persons');
-        $Persons->set($data)->where('id_person', $data['id_person']);
-        return $Persons->update();
+        // $Persons = $this->db->table('persons');
+        // $Persons->set($data)->where('id_person', $data['id_person']);
+        // return $Persons->update();
 
-        // 2. Actualizar la tabla definida, y retornar booleano (Fallando)
-        // return $this->update($data['id_person'], $data);
+        // 2. Actualizar la tabla definida, y retornar booleano
+        return $this->update($data['id_person'], $data);
     }
 
     public function deletePerson($id_person)
