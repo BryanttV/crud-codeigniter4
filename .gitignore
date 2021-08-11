@@ -1,3 +1,7 @@
+*.jpg
+*.jpeg
+*.png
+
 #-------------------------
 # Operating Specific Junk Files
 #-------------------------
@@ -124,4 +128,3 @@ nb-configuration.xml
 /results/
 /phpunit*.xml
 /.phpunit.*.cache
-
