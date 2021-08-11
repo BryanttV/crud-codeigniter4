@@ -1,6 +1,4 @@
-*.jpg
-*.jpeg
-*.png
+public/uploads
 
 #-------------------------
 # Operating Specific Junk Files

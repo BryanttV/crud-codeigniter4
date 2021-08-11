@@ -14,55 +14,58 @@ This is a simple CRUD created with Codeigniter4. This application has all the fe
 - PHPMyAdmin
 
 ### Installation
-  
+
 #### In the command line
+
 1. Clone the repository into the folder of local server.
-	```bash
-	git clone https://github.com/BryanttV/crud-codeigniter4.git
-	```
+   ```bash
+   git clone https://github.com/BryanttV/crud-codeigniter4.git
+   ```
 2. In the folder **/crud-codeigniter4** update composer.
-	```bash
-	composer update
-	```
+   ```bash
+   composer update
+   ```
+
 #### In the app
+
 1.  Modificate baseURL in **app/config/App.php**
-	```php
-	// Example
-	// public  $baseURL  =  'https://crud-codeigniter4.test/';
-	public $baseURL = 'your_url';
-	```
-2. Create database in **PHPMyAdmin**
-	```sql
-	// Example
-	// CREATE DATABASE crud_codeigniter4
-	CREATE DATABASE name_database
-	```
-3. Modificate database in **/app/config/Database.php**
-	```php
-	public  $default  = [
-	'DSN'  =>  '',
-	'hostname'  =>  'localhost',
-	'username'  =>  'your_user',
-	'password'  =>  'your_password',
-	'database'  =>  'your_db',
-	'DBDriver'  =>  'MySQLi',
-	'DBPrefix'  =>  '',
-	'pConnect'  =>  false,
-	'DBDebug'  => (ENVIRONMENT  !==  'production'),
-	'charset'  =>  'utf8',
-	'DBCollat'  =>  'utf8_general_ci',
-	'swapPre'  =>  '',
-	'encrypt'  =>  false,
-	'compress'  =>  false,
-	'strictOn'  =>  false,
-	'failover'  => [],
-	'port'  =>  3306,
-	];
-	```
-4. Make migrations into the **command line**
-	```bash
-	php spark migrate
-	```
+    ```php
+    // Example
+    // public  $baseURL  =  'https://crud-codeigniter4.test/';
+    public $baseURL = 'your_url';
+    ```
+2.  Create database in **PHPMyAdmin**
+    ```sql
+    -- Example
+    -- CREATE DATABASE crud_codeigniter4
+    CREATE DATABASE name_database
+    ```
+3.  Modificate database in **/app/config/Database.php**
+    ```php
+    public  $default  = [
+    'DSN'  =>  '',
+    'hostname'  =>  'localhost',
+    'username'  =>  'your_user',
+    'password'  =>  'your_password',
+    'database'  =>  'your_db',
+    'DBDriver'  =>  'MySQLi',
+    'DBPrefix'  =>  '',
+    'pConnect'  =>  false,
+    'DBDebug'  => (ENVIRONMENT  !==  'production'),
+    'charset'  =>  'utf8',
+    'DBCollat'  =>  'utf8_general_ci',
+    'swapPre'  =>  '',
+    'encrypt'  =>  false,
+    'compress'  =>  false,
+    'strictOn'  =>  false,
+    'failover'  => [],
+    'port'  =>  3306,
+    ];
+    ```
+4.  Make migrations into the **command line**
+    ```bash
+    php spark migrate
+    ```
 
 ## Usage
 
@@ -70,11 +73,10 @@ Access to localhost path and added a new person in the CRUD. Type your name, las
 
 ## License
 
-Distributed under the MIT License. See  `LICENSE`  for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Linkedin -  [BryanttV](www.linkedin.com/in/bryanttv)
+Linkedin - [BryanttV](www.linkedin.com/in/bryanttv)
 
-Project Link:  [crud-codeigniter4](https://github.com/BryanttV/crud-codeigniter4)
-
+Project Link: [crud-codeigniter4](https://github.com/BryanttV/crud-codeigniter4)
